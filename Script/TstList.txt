@@ -1,0 +1,6 @@
+#Experiments Tst(ingnore the line start with the symbol #)
+
+#Configuration file for reading the xml files
+
+#the result of the tst images
+G:/Experiment_Data/Photogrammetry_RemoteSensing/UAV/experiments_Data/tst2/tst1.xml
