@@ -65,10 +65,12 @@ aux_source_directory(. DIR_SRCS)
 #message(status "INCLUDE_DIRS: ${INCLUDE_DIRS} ")
 INCLUDE_DIRECTORIES(${INCLUDE_DIRS})
 INCLUDE_DIRECTORIES( ${PROJECT_SOURCE_DIR}/include
+					 ${PROJECT_SOURCE_DIR}/include/TinyXML
 					)
 LINK_LIBRARIES(${LIB_PATH})
 
-set(PROJECT_HEADERS ${PROJECT_SOURCE_DIR}/include/common.h)
+set(PROJECT_HEADERS ${PROJECT_SOURCE_DIR}/include/common.h
+					${PROJECT_SOURCE_DIR}/include/ConvertProcess.h)
 source_group("Include" FILES ${PROJECT_HEADERS})
 
 

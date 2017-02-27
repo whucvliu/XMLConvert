@@ -4,8 +4,8 @@
 #include <fstream>
 #include <sstream>
 #include <stdlib.h>
-
 #include "common.h"
+#include "ConvertProcess.h"
 
 using namespace std;
 
@@ -27,17 +27,12 @@ int _tmain(int argc, _TCHAR* argv[])
 	string sCFGFilePath;
 	while (ReadCFGFile(fCFGStream, sCFGFilePath))
 	{
-		//conduct the calibration of the fisheye cameras
-		/*
-		CFisheyeCameraCalib cFisheyeCameraCalib;
-		if (!(cFisheyeCameraCalib.CalibProcess(sCFGFilePath)))
-		{
-			cout << "Error in the Process of the camera calibration" << endl;
-			return 0;
-		}*/
+		//read the xml file and conduct the convert process
+		if (!ConvertProcess(sCFGFilePath))
+			cout << "Error in the convert process " << endl;
 	}
 
-
+	cout << "The End of the Process" << endl;
 
 	return 1;
 }
